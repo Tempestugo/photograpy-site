@@ -1,4 +1,4 @@
-Aqui está uma versão profissional, técnica e direta do seu **README.md**, focada em documentação de desenvolvedor, sem emojis, e com todos os passos necessários para instalação e execução.
+<img width="1889" height="942" alt="image" src="https://github.com/user-attachments/assets/7baed9ee-4e33-49ef-811e-516d1810489d" />
 
 ---
 
