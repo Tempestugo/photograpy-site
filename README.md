@@ -1,73 +1,74 @@
-# React + TypeScript + Vite
+Aqui está uma versão profissional, técnica e direta do seu **README.md**, focada em documentação de desenvolvedor, sem emojis, e com todos os passos necessários para instalação e execução.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+### README.md
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Minimalist Photography Portfolio
 
-## React Compiler
+Este projeto consiste em um portfólio de fotografia minimalista desenvolvido com React, TypeScript e Framer Motion. O objetivo principal é a exibição de trabalhos artísticos com foco em tipografia, layouts assimétricos e elementos visuais de fundo que utilizam efeitos de scroll.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Requisitos Prévios
 
-## Expanding the ESLint configuration
+Antes de iniciar o projeto, certifique-se de ter instalado em sua máquina:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **Node.js** (Versão 18.0.0 ou superior)
+* **npm** ou **yarn** (Gerenciadores de pacotes)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Tecnologias e Dependências Principais
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* **Vite**: Build tool e servidor de desenvolvimento.
+* **React 18**: Biblioteca base para a interface.
+* **TypeScript**: Tipagem estática para maior segurança do código.
+* **Framer Motion**: Biblioteca de animações para os efeitos de parallax e interações de hover.
+* **React Router Dom**: Gerenciamento de rotas e navegação.
+* **CSS Modules**: Escopo isolado de estilos por componente.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Instalação e Execução
+
+Siga os passos abaixo para configurar o ambiente de desenvolvimento local:
+
+1. Instalar as dependências do projeto:
+
+```bash
+npm install
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Iniciar o servidor de desenvolvimento:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+npm run dev
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+
+3. Gerar a build para produção:
+
+```bash
+npm run build
+
+```
+
+## Estrutura de Pastas Relevante
+
+* `/src/components`: Contém os componentes Hero e elementos de navegação.
+* `/src/pages`: Contém o componente Home com a lógica de layout desconstruído.
+* `/public/images/formas`: Local das imagens PNG utilizadas para os fundos geométricos (circulos.png, quadrados.png, linhas.png).
+* `/public/images/portfolio`: Diretórios de imagens para exibição nas galerias e seções de escada.
+
+## Funcionalidades Técnicas
+
+* **Staircase Grid**: Layout de imagens com deslocamento vertical progressivo via CSS Flexbox.
+* **Parallax Background**: Implementação de `useTransform` e `useScroll` do Framer Motion para movimentação de formas geométricas em diferentes velocidades.
+* **Image Filtering**: Aplicação de filtros `grayscale` e `contrast` via CSS para padronização visual de imagens externas (Unsplash).
+* **Posicionamento Absoluto**: Elementos decorativos posicionados fora do fluxo do documento para cruzar múltiplas seções sem afetar o layout principal.
+
+## Licença
+
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo LICENSE para obter o texto na íntegra.
+
+---
+
+3. Salve na pasta raiz (onde está o `package.json`).
+
+O que achou desta versão mais técnica para o seu GitHub? Se precisar de ajuda para configurar o deploy no **Vercel** ou **Netlify**, posso te passar os comandos.
