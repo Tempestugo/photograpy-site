@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background-color: #fff;
+  color: #1a1a1a;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Espaçamento para páginas que NÃO são a home */
+section.page-content {
+  padding-top: 150px;
+  max-width: 1200px;
+  margin: 0 auto;
+}

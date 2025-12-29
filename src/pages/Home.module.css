@@ -1,0 +1,302 @@
+.homeContainer {
+  background-color: #fff;
+  width: 100%;
+}
+
+/* --- SEÇÃO DESCONSTRUÍDA (TOP) --- */
+.deconstructedSection {
+  padding: 150px 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  align-items: center;
+  max-width: 1400px;
+  width: 100%;
+  position: relative;
+}
+
+.textContent {
+  z-index: 10;
+  margin-right: -100px;
+}
+
+.mainTitle {
+  font-size: clamp(4rem, 10vw, 10rem);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+}
+
+.buttonWrapper {
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.verText {
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+}
+
+.line {
+  width: 60px;
+  height: 2px;
+  background-color: #1a1a1a;
+  transition: width 0.3s;
+}
+
+.buttonWrapper:hover .line {
+  width: 100px;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.sideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- SEÇÃO DUPLA ESCADA (STAIRCASE) --- */
+.doubleStairSection {
+  padding: 100px 5%;
+  background-color: #fff;
+  margin-top: 50px;
+}
+
+.stairContainer {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr 1fr; /* Coluna | Texto | Coluna */
+  gap: 40px;
+  align-items: center;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.stairColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 60px; /* Espaço entre os degraus */
+}
+
+.centerText {
+  text-align: center;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.centerText span {
+  font-size: 0.6rem;
+  letter-spacing: 0.5em;
+  color: #888;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.centerText h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  margin-bottom: 20px;
+}
+
+.centerText p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 30px;
+  max-width: 350px;
+}
+
+.stairItem {
+  width: 100%;
+  max-width: 280px; /* Tamanho dos quadradinhos */
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+  cursor: pointer;
+  background-color: #f0f0f0;
+}
+
+.stairItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aboutLink {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #1a1a1a;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.aboutLink:hover {
+  opacity: 0.6;
+}
+
+/* Responsividade para Tablets e Celulares */
+@media (max-width: 1100px) {
+  .stairContainer {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+  
+  .stairColumn {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .stairItem {
+    max-width: 200px;
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .textContent {
+    margin-right: 0;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+
+.homeContainer {
+  background-color: #fff;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden; 
+}
+
+/* FORMAS GEOMÉTRICAS - Mantendo suas posições exatas */
+
+.shapeCirculos {
+  position: absolute;
+  top: 70%; 
+  right: -10%; 
+  width: 55%; 
+  opacity: 0.35;
+  z-index: 5; 
+  pointer-events: none;
+  /* O multiply remove o fundo branco/cinza e deixa só o traço */
+  mix-blend-mode: multiply; 
+}
+
+.shapeQuadrados {
+  position: absolute;
+  top: 40%; 
+  left: -5%; 
+  width: 65%; 
+  opacity: 0.25;
+  z-index: 0; 
+  pointer-events: none;
+  transform: rotate(-10deg);
+  mix-blend-mode: multiply;
+}
+
+.shapeLines {
+  position: absolute;
+  top: 5%;
+  left: 60%;
+  transform: translateX(-50%); 
+  width: 90%;
+  height: auto;
+  opacity: 0.4;
+  /* Z-index 1 para ficar acima do fundo mas abaixo do conteúdo principal */
+  z-index: 1; 
+  pointer-events: none;
+  /* Resolve o problema da mancha cinza se o PNG tiver fundo */
+  mix-blend-mode: multiply;
+  filter: grayscale(1); 
+}
+
+/* --- CONTEÚDO --- */
+
+.deconstructedSection {
+  position: relative;
+  z-index: 10; 
+  padding: 150px 10%;
+  display: flex;
+  justify-content: center;
+  background: transparent; 
+}
+
+.doubleStairSection {
+  position: relative;
+  z-index: 10;
+  padding: 100px 5%;
+  background: transparent; 
+}
+
+.imageWrapper {
+  position: relative;
+  z-index: 2; 
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.stairItem {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+  cursor: pointer;
+  background-color: #f0f0f0;
+}
+
+/* Centralização do texto na escada dupla */
+.centerText {
+  text-align: center;
+  padding: 0 20px;
+  z-index: 10;
+  position: relative;
+}
+
+.stairColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* ... Restante do CSS como mainTitle, etc ... */
+/* Filtro global para as fotos ficarem preto e cinza no estilo artístico */
+.sideImage, .stairItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.1); /* Deixa a foto P&B com mais contraste */
+  transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+/* Efeito opcional: volta a cor no hover */
+.stairItem:hover img, .imageWrapper:hover .sideImage {
+  filter: grayscale(0) contrast(1);
+}
+
+/* O restante do CSS que você já tem (shapes, staircaseGrid, etc) deve ser mantido abaixo */

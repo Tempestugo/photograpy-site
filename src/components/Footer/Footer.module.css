@@ -1,0 +1,84 @@
+.footer {
+  background-color: #fcfcfc;
+  padding: 120px 8% 40px 8%;
+  border-top: 1px solid #f0f0f0;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 100px;
+}
+
+.footerLogo {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-size: 0.8rem;
+  color: #888;
+  letter-spacing: 0.2em;
+}
+
+.contactInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.column span {
+  display: block;
+  font-size: 0.65rem;
+  letter-spacing: 0.3em;
+  color: #bbb;
+  margin-bottom: 2rem;
+}
+
+.column a, .column p {
+  display: block;
+  text-decoration: none;
+  color: #1a1a1a;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  transition: opacity 0.3s;
+}
+
+.socialLinks a {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.8rem;
+}
+
+.column a:hover {
+  opacity: 0.5;
+}
+
+.bottomBar {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #eee;
+  padding-top: 40px;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #aaa;
+}
+
+.madeBy {
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+  }
+  .contactInfo {
+    grid-template-columns: 1fr;
+  }
+}

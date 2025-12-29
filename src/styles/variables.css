@@ -1,0 +1,24 @@
+:root {
+  /* Cores */
+  --color-primary: #ffffff;
+  --color-secondary: #000000;
+  --color-accent: #333333;
+  --color-text: #000000;
+  --color-text-light: #666666;
+  
+  /* Espaçamentos */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 48px;
+  --spacing-xl: 96px;
+  
+  /* Tipografia */
+  --font-primary: 'Inter', -apple-system, sans-serif;
+  --font-secondary: 'Playfair Display', serif;
+  
+  /* Transições */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
