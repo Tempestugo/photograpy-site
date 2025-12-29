@@ -71,4 +71,3 @@ Este projeto está licenciado sob a Licença MIT. Consulte o arquivo LICENSE par
 
 3. Salve na pasta raiz (onde está o `package.json`).
 
-O que achou desta versão mais técnica para o seu GitHub? Se precisar de ajuda para configurar o deploy no **Vercel** ou **Netlify**, posso te passar os comandos.
